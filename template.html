@@ -1,1816 +1,445 @@
-<!-- 
-=====================================================
-    ONTRAPORT EMAIL TEMPLATE
-    
-    name: 
-    date:
-    author:
-=====================================================
- -->
- 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+    <head>
+    <!-- 
+    =================================
+        ONTRAPORT EMAIL TEMPLATE
+        
+        name: 
+        date:
+        author:
+    =================================
+     -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width">
+
+    <!-- 
+    Ink frame works styles. Feel free to remove this link an insert the styles in line while test. But know that
+    finished templates must use the link tag and not the inline styles
+    -->
+    <link rel="stylesheet" href="http://optassets.ontraport.com/opt_assets/templates/email/ink/ink.css" />
+    <!--
+    Ontraport apporved ink framework overrides. If you need to make a global override to framework styles and you think
+    it should be part of every ONTRAPORT email template email us your suggestions at teamdev-fe@ontraport.com 
+    -->
+    <link rel="stylesheet" href="http://optassets.ontraport.com/opt_assets/templates/email/ink/ink.ontraport.css" />
     <style>
-    /************************************************************************
-    * Ink v1.0.5 - Copyright 2013 ZURB Inc     DONT EDIT FRAMEWORK STYLES   *
+/*************************************************************************
+    * END FRAMEWORK STYLES * ADD TEMPLATE SPECIFIC STYLES BELOW THIS LINE       
     *************************************************************************/
     
-    /* Client-specific Styles and Reset */
+    /* start template specific css -----------------------------------------*/
 
-    #outlook a {
-      padding:0;
-    }
-    
-    body{
-      width:100% !important;
-      min-width: 100%;
-      -webkit-text-size-adjust:100%;
-      -ms-text-size-adjust:100%;
-      margin:0;
-      padding:0;
-    }
-    
-      /* .ExternalClass applies to Outlook.com (the artist formerly known as Hotmail)  */
-    
-    .ExternalClass {
-      width:100%;
-    }
-    
-    .ExternalClass,
-    .ExternalClass p,
-    .ExternalClass span,
-    .ExternalClass font,
-    .ExternalClass td,
-    .ExternalClass div {
-      line-height: 100%;
-    }
-    
-    #backgroundTable {
-      margin:0;
-      padding:0;
-      width:100% !important;
-      line-height: 100% !important;
-    }
-    
-    img {
-      outline:none;
-      text-decoration:none;
-      -ms-interpolation-mode: bicubic;
-      width: auto;
-      max-width: 100%;
-      float: left;
-      clear: both;
-      display: block;
-    }
-    
-    center {
-      width: 100%;
-      min-width: 580px;
-    }
-    
-    a img {
-      border: none;
-    }
-    
-    p {
-      margin: 0 0 0 10px;
-    }
-    
-    table {
-      border-spacing: 0;
-      border-collapse: collapse;
-    }
-    
-    td {
-      word-break: break-word;
-      -webkit-hyphens: auto;
-      -moz-hyphens: auto;
-      hyphens: auto;
-      border-collapse: collapse !important;
-    }
-    
-    table, tr, td {
-      padding: 0;
-      vertical-align: top;
-      text-align: left;
-    }
-    
-    hr {
-      color: #d9d9d9;
-      background-color: #d9d9d9;
-      height: 1px;
-      border: none;
-    }
-    
-    /* Responsive Grid */
-    
-    table.body {
-      height: 100%;
-      width: 100%;
-    }
-    
-    table.container {
-      width: 580px;
-      margin: 0 auto;
-      text-align: inherit;
-    }
-    
-    table.row {
-      padding: 0px;
-      width: 100%;
-      position: relative;
-    }
-    
-    table.container table.row {
-      display: block;
-    }
-    
-    td.wrapper {
-      padding: 10px 20px 0px 0px;
-      position: relative;
-    }
-    
-    table.columns,
-    table.column {
-      margin: 0 auto;
-    }
-    
-    table.columns td,
-    table.column td {
-      padding: 0px 0px 10px;
-    }
-    
-    table.columns td.sub-columns,
-    table.column td.sub-columns,
-    table.columns td.sub-column,
-    table.column td.sub-column {
-      padding-right: 10px;
-    }
-    
-    td.sub-column, td.sub-columns {
-      min-width: 0px;
-    }
-    
-    table.row td.last,
-    table.container td.last {
-      padding-right: 0px;
-    }
-    
-    table.one { width: 30px; }
-    table.two { width: 80px; }
-    table.three { width: 130px; }
-    table.four { width: 180px; }
-    table.five { width: 230px; }
-    table.six { width: 280px; }
-    table.seven { width: 330px; }
-    table.eight { width: 380px; }
-    table.nine { width: 430px; }
-    table.ten { width: 480px; }
-    table.eleven { width: 530px; }
-    table.twelve { width: 580px; }
-    
-    table.one center { min-width: 30px; }
-    table.two center { min-width: 80px; }
-    table.three center { min-width: 130px; }
-    table.four center { min-width: 180px; }
-    table.five center { min-width: 230px; }
-    table.six center { min-width: 280px; }
-    table.seven center { min-width: 330px; }
-    table.eight center { min-width: 380px; }
-    table.nine center { min-width: 430px; }
-    table.ten center { min-width: 480px; }
-    table.eleven center { min-width: 530px; }
-    table.twelve center { min-width: 580px; }
-    
-    table.one .panel center { min-width: 10px; }
-    table.two .panel center { min-width: 60px; }
-    table.three .panel center { min-width: 110px; }
-    table.four .panel center { min-width: 160px; }
-    table.five .panel center { min-width: 210px; }
-    table.six .panel center { min-width: 260px; }
-    table.seven .panel center { min-width: 310px; }
-    table.eight .panel center { min-width: 360px; }
-    table.nine .panel center { min-width: 410px; }
-    table.ten .panel center { min-width: 460px; }
-    table.eleven .panel center { min-width: 510px; }
-    table.twelve .panel center { min-width: 560px; }
-    
-    .body .columns td.one,
-    .body .column td.one { width: 8.333333%; }
-    .body .columns td.two,
-    .body .column td.two { width: 16.666666%; }
-    .body .columns td.three,
-    .body .column td.three { width: 25%; }
-    .body .columns td.four,
-    .body .column td.four { width: 33.333333%; }
-    .body .columns td.five,
-    .body .column td.five { width: 41.666666%; }
-    .body .columns td.six,
-    .body .column td.six { width: 50%; }
-    .body .columns td.seven,
-    .body .column td.seven { width: 58.333333%; }
-    .body .columns td.eight,
-    .body .column td.eight { width: 66.666666%; }
-    .body .columns td.nine,
-    .body .column td.nine { width: 75%; }
-    .body .columns td.ten,
-    .body .column td.ten { width: 83.333333%; }
-    .body .columns td.eleven,
-    .body .column td.eleven { width: 91.666666%; }
-    .body .columns td.twelve,
-    .body .column td.twelve { width: 100%; }
-    
-    td.offset-by-one { padding-left: 50px; }
-    td.offset-by-two { padding-left: 100px; }
-    td.offset-by-three { padding-left: 150px; }
-    td.offset-by-four { padding-left: 200px; }
-    td.offset-by-five { padding-left: 250px; }
-    td.offset-by-six { padding-left: 300px; }
-    td.offset-by-seven { padding-left: 350px; }
-    td.offset-by-eight { padding-left: 400px; }
-    td.offset-by-nine { padding-left: 450px; }
-    td.offset-by-ten { padding-left: 500px; }
-    td.offset-by-eleven { padding-left: 550px; }
-    
-    td.expander {
-      visibility: hidden;
-      width: 0px;
-      padding: 0 !important;
-    }
-    
-    table.columns .text-pad,
-    table.column .text-pad {
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-    
-    table.columns .left-text-pad,
-    table.columns .text-pad-left,
-    table.column .left-text-pad,
-    table.column .text-pad-left {
-      padding-left: 10px;
-    }
-    
-    table.columns .right-text-pad,
-    table.columns .text-pad-right,
-    table.column .right-text-pad,
-    table.column .text-pad-right {
-      padding-right: 10px;
-    }
-    
-    /* Block Grid */
-    
-    .block-grid {
-      width: 100%;
-      max-width: 580px;
-    }
-    
-    .block-grid td {
-      display: inline-block;
-      padding:10px;
-    }
-    
-    .two-up td {
-      width:270px;
-    }
-    
-    .three-up td {
-      width:173px;
-    }
-    
-    .four-up td {
-      width:125px;
-    }
-    
-    .five-up td {
-      width:96px;
-    }
-    
-    .six-up td {
-      width:76px;
-    }
-    
-    .seven-up td {
-      width:62px;
-    }
-    
-    .eight-up td {
-      width:52px;
-    }
-    
-    /* Alignment and Visibility Classes */
-    
-    table.center, td.center {
-      text-align: center;
-    }
-    
-    h1.center,
-    h2.center,
-    h3.center,
-    h4.center,
-    h5.center,
-    h6.center,
-    p.center {
-      text-align: center;
-    }
-    
-    span.center {
-      display: block;
-      width: 100%;
-      text-align: center;
-    }
-    
-    img.center {
-      margin: 0 auto;
-      float: none;
-    }
-    
-    .show-for-small,
-    .hide-for-desktop {
-      display: none;
-    }
-    
-    /* Typography */
-    
-    body, table.body, h1, h2, h3, h4, h5, h6, p, td {
-      color: #222222;
-      font-family: Helvetica, Arial, sans-serif;
-      font-weight: normal;
-      padding:0;
-      margin: 0;
-      text-align: left;
-      line-height: 1.3;
-    }
-    
-    h1, h2, h3, h4, h5, h6 {
-      word-break: normal;
-    }
-    
-    h1 {font-size: 40px;}
-    h2 {font-size: 36px;}
-    h3 {font-size: 32px;}
-    h4 {font-size: 28px;}
-    h5 {font-size: 24px;}
-    h6 {font-size: 20px;}
-    body, table.body, p, td {font-size: 14px;line-height:19px;}
-    
-    p.lead, p.lede, p.leed {
-      font-size: 18px;
-      line-height:21px;
-    }
-    
-    p {
-      margin-bottom: 10px;
-    }
-    
-    small {
-      font-size: 10px;
-    }
-    
-    a {
-      color: #2ba6cb;
-      text-decoration: none;
-    }
-    
-    a:hover {
-      color: #2795b6 !important;
-    }
-    
-    a:active {
-      color: #2795b6 !important;
-    }
-    
-    a:visited {
-      color: #2ba6cb !important;
-    }
-    
-    h1 a,
-    h2 a,
-    h3 a,
-    h4 a,
-    h5 a,
-    h6 a {
-      color: #2ba6cb;
-    }
-    
-    h1 a:active,
-    h2 a:active,
-    h3 a:active,
-    h4 a:active,
-    h5 a:active,
-    h6 a:active {
-      color: #2ba6cb !important;
-    }
-    
-    h1 a:visited,
-    h2 a:visited,
-    h3 a:visited,
-    h4 a:visited,
-    h5 a:visited,
-    h6 a:visited {
-      color: #2ba6cb !important;
-    }
-    
-    /* Panels */
-    
-    .panel {
-      background: #f2f2f2;
-      border: 1px solid #d9d9d9;
-      padding: 10px !important;
-    }
-    
-    .sub-grid table {
-      width: 100%;
-    }
-    
-    .sub-grid td.sub-columns {
-      padding-bottom: 0;
-    }
-    
-    /* Buttons */
-    
-    table.button,
-    table.tiny-button,
-    table.small-button,
-    table.medium-button,
-    table.large-button {
-      width:192px;
-      overflow: hidden;
-	  height:43px;
-    }
-    
-    table.button td,
-    table.tiny-button td,
-    table.small-button td,
-    table.medium-button td,
-    table.large-button td {
-      display: block;
-      width: auto !important;
-      text-align: center;
-      background: #c80000 ;
-      border: 1px solid #c80000 ;
-      color: #ffffff;
-      padding: 8px 0;
-    }
-    
-    .discount table.tiny-button td {
-      padding: 15px 0 5px !important;
-    }
-    
-    table.small-button td {
-      padding: 8px 0 7px;
-    }
-    
-    table.medium-button td {
-      padding: 12px 0 10px;
-    }
-    
-    table.large-button td {
-      padding: 21px 0 18px;
-    }
-    
-    table.button td a,
-    table.tiny-button td a,
-    table.small-button td a,
-    table.medium-button td a,
-    table.large-button td a {
-      font-weight: bold;
-      text-decoration: none;
-      font-family: Helvetica, Arial, sans-serif;
-      color: #ffffff;
-      font-size: 16px;
-      display: block;
-      height: 100%;
-      width: 100%;
-    }
-    
-    table.tiny-button td a {
-      font-size: 12px;
-      font-weight: normal;
-    }
-    
-    table.small-button td a {
-      font-size: 16px;
-    }
-    
-    table.medium-button td a {
-      font-size: 20px;
-    }
-    
-    table.large-button td a {
-      font-size: 24px;
-    }
-    
-    table.button:hover td,
-    table.button:visited td,
-    table.button:active td {
-      background: #2795b6 !important;
-    }
-    
-    table.button:hover td a,
-    table.button:visited td a,
-    table.button:active td a {
-      color: #fff !important;
-    }
-    
-    table.button:hover td,
-    table.tiny-button:hover td,
-    table.small-button:hover td,
-    table.medium-button:hover td,
-    table.large-button:hover td {
-      background: #c80000 !important;
-    }
-    
-    table.button:hover td a,
-    table.button:active td a,
-    table.button td a:visited,
-    table.tiny-button:hover td a,
-    table.tiny-button:active td a,
-    table.tiny-button td a:visited,
-    table.small-button:hover td a,
-    table.small-button:active td a,
-    table.small-button td a:visited,
-    table.medium-button:hover td a,
-    table.medium-button:active td a,
-    table.medium-button td a:visited,
-    table.large-button:hover td a,
-    table.large-button:active td a,
-    table.large-button td a:visited {
-      color: #ffffff !important;
-    }
-    
-    table.secondary td {
-      background: #e9e9e9;
-      border-color: #d0d0d0;
-      color: #555;
-    }
-    
-    table.secondary td a {
-      color: #555;
-    }
-    
-    table.secondary:hover td {
-      background: #d0d0d0 !important;
-      color: #555;
-    }
-    
-    table.secondary:hover td a,
-    table.secondary td a:visited,
-    table.secondary:active td a {
-      color: #555 !important;
-    }
-    
-    table.success td {
-      background: #5da423;
-      border-color: #457a1a;
-    }
-    
-    table.success:hover td {
-      background: #457a1a !important;
-    }
-    
-    table.alert td {
-      background: #c60f13;
-      border-color: #970b0e;
-    }
-    
-    table.alert:hover td {
-      background: #970b0e !important;
-    }
-    
-    table.radius td {
-      -webkit-border-radius: 3px;
-      -moz-border-radius: 3px;
-      border-radius: 3px;
-    }
-    
-    table.round td {
-      -webkit-border-radius: 500px;
-      -moz-border-radius: 500px;
-      border-radius: 500px;
-    }
-    
-    /* Outlook First */
-    
-    body.outlook p {
-      display: inline !important;
-    }
-    /*---added css 17.11.2014--start---*/
-	.header_txt{
-		font-family:Arial, Helvetica, sans-serif;
-		font-size:11px;
-		color:#fff;
-		font-weight:normal;
-		vertical-align:middle;
-	}
-	.header_link{
-		font-family:Arial, Helvetica, sans-serif;
-		font-size:11px;
-		color:#ffffff;
-		font-weight:normal;
-		vertical-align:middle;
-	}
-	.header_link a{
-		text-decoration:underline;
-		color:#ffffff !important;
-	}
-	.header_link a:hover{
-		color:#ffffff !important;
-		text-decoration:none;
-	}
-	.logo{ 
-	width:203px;
-	height:49px;
-	margin:0px auto;
-	}
-	table.columns td.logo_area{
-		padding:20px 0px;
-	}
-	.discount{
-		width:100%;
-		clear:both;
-	}
-	.discount h1{
-		font-family:Arial, Helvetica, sans-serif;
-		font-size:29px;
-		color:#555555;
-		text-align:center;
-		text-transform:uppercase;
-	}
-	.discount h2{
-		font-family:Georgia, "Times New Roman", Times, serif;
-		font-size:17px;
-		color:#555555;
-		font-style:italic;
-		text-align:center;
-	}
-	.book_traver_area{ 
-		width:100%;
-		clear:both;
-	}
-	table.columns td.discount table.columns  td{
-		padding-bottom:0px;
-		}
-	.dis_cnt{
-		font-family:Arial, Helvetica, sans-serif;
-		font-size:13px;
-		color:#555555;
-		text-align:center;
-	}
-	.tiny-button .book_traver_btn, .tiny-button .book_traver_btn:hover{
-		font-family:Arial, Helvetica, sans-serif;
-		font-size:15px;
-		color:#ffffff;
-		width:192px;
-		text-decoration:none;
-		text-transform:uppercase;
-		margin:0px auto;
-		background-color:#c80000;
-		display:block;
-		text-align:center;
-		
-	}
-		table.tiny-button td.bkdd {
-    background:  #c80000 ;
-    border: medium none;
-    display: block !important;
-    height: 43%;
-    vertical-align: middle;
-    width: 192px !important;
+.my-template {
+	font-family: Arial, Helvetica, sans-serif;
 }
-table.tiny-button td.bkdd, table.tiny-button{
-	background: #c80000 ;
-	}
+.my-template p {
+	font-size: 13px;
+	color: #555555;
+}
+.my-template .header .container, .my-template .blue-part, .social-links {
+	background-color: #3699c3;
+}
+.my-template .blue-part, .my-template .social-links {
+	border: none;
+}
+.client-say .arrow img {
+	float: right;
+	margin-right: -1px;
+}
+.client-say .arrow-right img {
+	float: left;
+	margin-left: -1px;
+}
+.my-template .client-content {
+	border: 1px solid #e6e6e6;
+	text-align: left;
+	background: #ffffff;
+}
+.testimonials-texts {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 13px;
+	text-align: left;
+	color: #7a7a7a;
+}
+.most-popular h6 {
+	font-size: 14px;
+	text-transform: uppercase;
+	clear: both;
+	width: 100%;
+	padding-top: 10px;
+}
+p.center {
+	text-align: center;
+}
+.my-template .color-red {
+	color: #c80000;
+	text-align: left;
+}
+.my-template .social-icon a, .my-template .email-text p, .my-template .email-text p a {
+	color: #ffffff;
+	display: inline-block;
+	font-size: 12px;
+	width: auto;
+	text-align: center;
+}
+.my-template .connect-text p {
+	text-align: right;
+	color: #ffffff;
+}
+.my-template .color-white, .my-template .template-label a.color-white, .my-template .email-text p.center a, .my-template .blue-part .color-white b, .my-template .blue-part p a, .my-template .travel, .my-template .template-label, .my-template .template-label.color-white {
+	color: #ffffff !important;
+}
+.footer-bottom p {
+	font-size: 11px;
+	text-transform: uppercase;
+}
+.footer-bottom a {
+	color: #2c2c2c;
+	text-transform: uppercase;
+}
+.my-template td.wrapper {
+	padding: 10px 20px 0 0;
+}
+.my-template .color-black {
+	color: #555555;
+}
+.my-template .color-fade-blue {
+	color: #cbf0ff;
+}
+.travel, .my-template .template-label {
+	color: #ffffff;
+	font-size: 11px;
+}
+.my-template .social-icon {
+	text-align: left;
+}
+.profile-image-wrap {
+	width: 145px;
+}
+.popular-image-area {
+	width: 280px;
+}
+.logo {
+	width: 203px;
+}
 
-	.most_popular_top h1{
-		font-family:Arial, Helvetica, sans-serif;
-		font-size:29px;
-		color:#555555;
-		text-align:center;
-		text-transform:uppercase;
-	}
-	.popular_cnt, .mp_cnt p, .client_say_cnt{
-		font-family:Arial, Helvetica, sans-serif;
-		font-size:13px;
-		color:#555555;
-		text-align:center;
-		line-height:20px;
-	}
-	.mp_cnt h1{
-		font-family:Arial, Helvetica, sans-serif;
-		font-size:14px;
-		color:#080808;
-		font-weight:bold;
-		text-align:center;
-		clear:both;
-	}
-	.mp_cnt p{
-		margin-bottom:0px;
-		clear:both;
-		margin-top:10px;
-	}
-	.mp_cnt br{ height:10px;}
-	.bluePart{
-		background-color:#3699c3;
-		width:580px;
-	}
-	.promotion_heading{
-		font-family:Arial, Helvetica, sans-serif;
-		font-size:29px;
-		color:#ffffff;
-		text-align:center;
-		text-transform:uppercase;
-		font-weight:bold;
-	}
-	.promotion_cnt{
-		font-family:Arial, Helvetica, sans-serif;
-		font-size:13px;
-		color:#cbf0ff;
-		font-weight:bold;
-		text-align:center;
-	}
-	.client_say_heading{
-		font-family:Arial, Helvetica, sans-serif;
-		font-size:29px;
-		color:#555555;
-		text-align:center;
-		text-transform:uppercase;
-		font-weight:bold;
-	}
-	.client_say_cnt{
-		font-weight:bold;
-	}
-	.speak_node{
-		width:28px;
-	}
-	.testi_maincnt{
-		border-bottom:1px solid #e6e6e6;
-		border-top:1px solid #e6e6e6;
-		border-right:1px solid #e6e6e6;
-		border-left:none;
-	}
-	.testa_cnt{
-		font-family:Georgia, "Times New Roman", Times, serif;
-		font-size:13px;
-		font-style:italic;
-		color:#7a7a7a;
-		font-weight:normal;
-	}
-	.autor a{
-		font-family:Arial, Helvetica, sans-serif;
-		font-size:13px;
-		color:#c80000 !important;
-		text-transform:uppercase;
-	}
-	.testi_maincnt_right{
-		border-bottom:1px solid #e6e6e6;
-		border-top:1px solid #e6e6e6;
-		border-left:1px solid #e6e6e6;
-		border-right:none;
-	}
-	.footer_top{
-		background-color:#3699c3;
-	}
-	.social_contact{ 
-		width:200px;
-		margin:0px auto;
-	}
-	.contact_details {
-		font-family:Arial, Helvetica, sans-serif;
-		font-size:12px;
-		color:#ffffff;
-		font-weight:normal;
-		width:520px;
-	}
-	.contact_details td{
-		font-family:Arial, Helvetica, sans-serif;
-		font-size:12px;
-		color:#ffffff;
-		font-weight:normal;
-	}
-	.contact_details td a{
-		font-family:Arial, Helvetica, sans-serif;
-		font-size:12px;
-		color:#ffffff !important;
-		font-weight:normal;
-	}
-	.contact_details td a:hover{
-		text-decoration:underline;
-	}
-	.phno{ 
-	text-align:right;
-	}
-	.email_id{
-		text-align:left;
-	}
-	.footer_bottom{
-	}
-	.footer_txt{
-		font-family:Arial, Helvetica, sans-serif;
-		font-size:11px;
-		color:#2c2c2c;
-		font-weight:normal;
-		text-align:center;
-		text-transform:uppercase;
-	}
-	.footer_menu, .footer_menu a{
-		font-family:Arial, Helvetica, sans-serif;
-		font-size:11px;
-		color:#2c2c2c !important;
-		font-weight:normal;
-		text-align:center;
-		text-transform:uppercase;
-	}
-	table.columns td.footer_txt{
-		padding-bottom:0px;
-	}
-	table.container{
-		border-left:1px solid #e6e6e6;
-		border-right:1px solid #e6e6e6;
-		border-bottom:1px solid #e6e6e6;
-	}
-	.logo_area img{
-		display:inline-block;
-	}
-	table.row{
-		width:580px;
-	}
-	.testi_maincnt{
-		height:113px;
-	}
-	.divheight30{ }
-	table.tiny-button.booktd{ 
-	background:#c80000; 
-	text-align:center; 
-	vertical-align:middle; 
-	}
-	.booktd_table{ 
-	width:192px !important; 
-	margin:0px auto;}
-	.phno{ 
-	text-align:center;}
-	.mp_table_td img{
-		width:252px;
-		height:206px;
-	}
-	.popular_places_row td{ 
-	display:table-cell;}
-	.speak_node img{ 
-	float:right;}
-	.speak_node_right img{ 
-	float:left;}
-	table.columns table.mp_table td{
-	}
-	table.columns table.mp_table td.mp_cnt{ 
-	padding-top:10px;}
-	table.columns  td.mp_lf{
-		padding-bottom:0px;
-	}
-	.mostpopular table.columns td.div30{
-		padding-bottom:0px;
-	}
-	.mostpopular td.wrapper{
-		padding-top:0px;
-	}
-	.social_links {
-		text-align:center;
-	}
-	.social_links{
-		display:inline;
-	}
-	
-	/*---added css 17.11.2014--end---*/
-    /*  Media Queries */
-    
+ 
+
+    /*template specific media quieries -------------------------------------*/
     @media only screen and (max-width: 600px) {
-    
-      table[class="body"] img {
-        width: auto !important;
-        height: auto !important;
-      }
-    
-      table[class="body"] center {
-        min-width: 0 !important;
-      }
-    
-      table[class="body"] .container {
-        width: 95% !important;
-      }
-    
-      table[class="body"] .row {
-        width: 100% !important;
-        display: block !important;
-      }
-    
-      table[class="body"] .wrapper {
-        display: block !important;
-        padding-right: 0 !important;
-      }
-    
-      table[class="body"] .columns,
-      table[class="body"] .column {
-        table-layout: fixed !important;
-        float: none !important;
-        width: 100% !important;
-        padding-right: 0px !important;
-        padding-left: 0px !important;
-        display: block !important;
-      }
-    
-      table[class="body"] .wrapper.first .columns,
-      table[class="body"] .wrapper.first .column {
-        display: table !important;
-      }
-    
-      table[class="body"] table.columns td,
-      table[class="body"] table.column td {
-        width: 100% !important;
-      }
-    
-      table[class="body"] .columns td.one,
-      table[class="body"] .column td.one { width: 8.333333% !important; }
-      table[class="body"] .columns td.two,
-      table[class="body"] .column td.two { width: 16.666666% !important; }
-      table[class="body"] .columns td.three,
-      table[class="body"] .column td.three { width: 25% !important; }
-      table[class="body"] .columns td.four,
-      table[class="body"] .column td.four { width: 33.333333% !important; }
-      table[class="body"] .columns td.five,
-      table[class="body"] .column td.five { width: 41.666666% !important; }
-      table[class="body"] .columns td.six,
-      table[class="body"] .column td.six { width: 50% !important; }
-      table[class="body"] .columns td.seven,
-      table[class="body"] .column td.seven { width: 58.333333% !important; }
-      table[class="body"] .columns td.eight,
-      table[class="body"] .column td.eight { width: 66.666666% !important; }
-      table[class="body"] .columns td.nine,
-      table[class="body"] .column td.nine { width: 75% !important; }
-      table[class="body"] .columns td.ten,
-      table[class="body"] .column td.ten { width: 83.333333% !important; }
-      table[class="body"] .columns td.eleven,
-      table[class="body"] .column td.eleven { width: 91.666666% !important; }
-      table[class="body"] .columns td.twelve,
-      table[class="body"] .column td.twelve { width: 100% !important; }
-    
-      table[class="body"] td.offset-by-one,
-      table[class="body"] td.offset-by-two,
-      table[class="body"] td.offset-by-three,
-      table[class="body"] td.offset-by-four,
-      table[class="body"] td.offset-by-five,
-      table[class="body"] td.offset-by-six,
-      table[class="body"] td.offset-by-seven,
-      table[class="body"] td.offset-by-eight,
-      table[class="body"] td.offset-by-nine,
-      table[class="body"] td.offset-by-ten,
-      table[class="body"] td.offset-by-eleven {
-        padding-left: 0 !important;
-      }
-    
-      table[class="body"] table.columns td.expander {
-        width: 1px !important;
-      }
-    
-      table[class="body"] .right-text-pad,
-      table[class="body"] .text-pad-right {
-        padding-left: 10px !important;
-      }
-    
-      table[class="body"] .left-text-pad,
-      table[class="body"] .text-pad-left {
-        padding-right: 10px !important;
-      }
-    
-      table[class="body"] .hide-for-small,
-      table[class="body"] .show-for-desktop {
-        display: none !important;
-      }
-    
-      table[class="body"] .show-for-small,
-      table[class="body"] .hide-for-desktop {
-        display: inherit !important;
-      }
-	  /*----added css start------*/
-	 .header{
-		
-		}
-		
-		table[class="body"] table.columns td.header_txt {
-			width:300px !important;
-		}
-		table[class="body"] table.columns td.header_link{
-			width:200px !important;
-		}
-	  
-	  .header table.container{
-		  border:none;
-		 }
-		 
-table[class="body"] table.columns td.div30{
-	width:6% !important;
+.my-template .connect-text p, .my-template .social-icon {
+	text-align: center !important;
 }
-table[class="body"] table.columns td.div180{
-	width:33% !important;
+.video-image-wrap, .popular-image-area, .banner-image-wrap {
+	width: 100%;
 }
-table[class="body"] table.columns td.logo_area{
-	width:203px !important;
+.banner-image-wrap {
+	width: 100%;
 }
-table[class="body"] table.columns td.banner{
-	width:60%;
+.video-image-wrap {
+	width: 100%;
 }
-table[class="body"] table.columns td.banner img{
-	width:100% !important;
+.my-template p.color-fade-blue {
+	margin-bottom: 0px;
 }
-
-table[class="body"] table.columns td.discount .div30{
-	display:none !important;
 }
-table[class="body"] table.columns td.div165{
-	width:20% !important;
-}
-table[class="body"] table.columns td.booktd{
-	width:190px !important;
-}
-.row video_section img{
-	max-width:100%;
-}
-	  /*----added css end------*/
-	  .mp_table{ width:100%;}
-		.popular_places .mp_lf, .right-text-pad, .bkd, .contact_details, .bluePart{
-			width:100% !important;
-			}
-           table[class="body"] .row{ 
-		     width:100% !important;
-			}
-		 .video_section img{ 
-		    width:100% !important;
-		}
-		 .popular_places_row tr td, .bkd tr td{ 
-		   display:block !important;
-		   }
-		   .video_section td{ 
-		    width:100% !important; display:block !important;
-			}
-		   .video_section td img, .mp_table td img, .mp_table img{ 
-		      width:100% !important;
-			  }
-		   table[class="body"] table.columns.banner_tbl .div30, table[class="body"] table.columns.dsc .div30{ 
-		     width:10px !important;
-			 }
-		   table[class="body"] table.columns.banner_tbl td.banner, table[class="body"] table.columns.dsc td.discount{
-			    width:95% !important;
-			}
-		   table[class="body"] table.columns td.booktd {
-				left: 50%;
-				margin-left: -98px;
-				position: relative;
-				width: 196px !important;
-			}
-			 table[class="body"] .popular_places .div30, .client_say .div30, .client_say .div45, .client_say .div22, .client_say .div15, .testimonial_row div45, .footer_top .div157, .footer_top .div30, .bluePart .div30{ width:2.5% !important;}
-	
-		   .popular_places .mp_lf{ width:98% !important;}
-		   table[class="body"] .right-text-pad, table[class="body"] .text-pad-right{ padding-left:0 !important;  width:95% !important;}
-		   .popular_places .mp_lf {
-				padding-left: 2.5%;
-				width: 95% !important;
-			}
-			.popular_places .mp_lf .right-text-pad{
-				 width:100% !important;}
-			.prof_image{ width:18%;}
-			table[class="body"] .prof_image img, .speak_node img{ 
-			 width:100% !important;
-			 }
-			 .testa_cnt{ font-size:12px;}
-			 .footer_top .div157{ display:none;}
-			 .promotion_heading, .most_popular_top h1, .discount h1, .client_say_heading{ font-size:24px !important;}
-			 .autor a{
-				 font-size:11px;
-				}
-			.speak_node{  height:113px !important;}
-			.speak_node img{ height:113px !important;}
-			.autor{ height:20px !important;}
-			.testi_maincnt .div22{ height:7.5px !important;}
-			.testi_maincnt{ height:113px !important;}
-			.footer_bottom .wrapper { width:100% !important; text-align:center; padding-left:2.5%;}
-			.footer_menu p, .footer_menu p a{ text-align:center !important;}
-			table[class="body"] .header .columns{ width: 100% !important; /*display:inline-table !important;*/}
-			.client_say, .client_say_top, .testimonial, .testimonial_row, .most_popular_top{ width:100% !important;}
-			.testi_maincnt{ width:100% !important;}
-			table[class="body"] table.columns td.header_txt{
-				width:200px !important
-				}
-	.popular_places .mp_lf{
-		float:left;
-	}
-	.social_links{ margin:0px auto;}
-	.phno{ width:40% !important;;}
-	.testi_maincnt, .testi_maincnt{ height:113px !important;}
-	table[class="body"] .footer_bottom table.columns { width:95% !important;}
-	table[class="body"] .footer_bottom table.columns td.footer_txt{ width:95% !important;}
-	.footer_bottom .wrapper{ width:97% !important;}
-	.testa_cnt{
-		line-height:15px !important;
-	}
-	table[class="body"] .container{
-		width:93% !important;
-	}
-	.header{ background-color:#3699c3;}
-	.phno{ text-align:left;}
-	table.button, table.tiny-button, table.small-button, table.medium-button, table.large-button {
-    height: 43px;
-    margin: 0 auto;
-    overflow: hidden;
-    vertical-align: middle;
-    width: 192px;
-}
-.popular_places_row .div30{ display:none;}
-table[class="body"] .popular_places .div30{ display:none;}
-table[class="body"] .mostpopular table.columns td.div30{ display:none !important;}
-    }
-
     
-    /*************************************************************************
-    * END FRAMEWORK STYLES * ADD TEMPLATE SPECIFIC STYLES BELOW THIS LINE
-    *                        DO NOT EDIT ANYTHING ABOVE THIS LINE
-    *************************************************************************/
-    
-    /* start template specific css-  ****************************************/
-   
-   
-   
-    /*template specific media quieries--------------------------------------*/
-    @media only screen and (max-width: 480px) {
-		.mp_table{ width:100%;}
-		.popular_places .mp_lf, .right-text-pad, .bkd, .contact_details, .bluePart{
-			width:100% !important;
-			}
-           table[class="body"] .row{ 
-		     width:100% !important;
-			}
-		 .video_section img{ 
-		    width:100% !important;
-		}
-		 .popular_places_row tr td, .bkd tr td{ 
-		   display:block !important;
-		   }
-		   .video_section td{ 
-		    width:100% !important; display:block !important;
-			}
-		   .video_section td img, .mp_table td img, .mp_table img{ 
-		      width:100% !important;
-			  }
-		   table[class="body"] table.columns.banner_tbl .div30, table[class="body"] table.columns.dsc .div30{ 
-		     width:10px !important;
-			 }
-		   table[class="body"] table.columns.banner_tbl td.banner, table[class="body"] table.columns.dsc td.discount{
-			    width:95% !important;
-			}
-		   table[class="body"] table.columns td.booktd {
-				/*left: 50%;
-				margin-left: -98px;*/
-				position: relative;
-				left:7%;
-				width: 196px !important;
-				margin-left:0px;
-			}
-			 table[class="body"] .popular_places .div30, .client_say .div30, .client_say .div45, .client_say .div22, .client_say .div15, .testimonial_row div45, .footer_top .div157, .footer_top .div30, .bluePart .div30{ width:2.5% !important;}
-	
-		   .popular_places .mp_lf{ width:98% !important;}
-		   table[class="body"] .right-text-pad, table[class="body"] .text-pad-right{ padding-left:0 !important;  width:95% !important;}
-		   .popular_places .mp_lf {
-				padding-left: 2.5%;
-				width: 95% !important;
-			}
-			.popular_places .mp_lf .right-text-pad{
-				 width:100% !important;}
-			.prof_image{ width:18%;}
-			table[class="body"] .prof_image img, .speak_node img{ 
-			 width:100% !important;
-			 }
-			 .testa_cnt{ font-size:11px !important;}
-			 .footer_top .div157{ display:none;}
-			 .promotion_heading, .most_popular_top h1, .discount h1, .client_say_heading{ font-size:24px !important;}
-			 .autor a{
-				 font-size:11px !important;
-				}
-			
-			.speak_node img{}
-			.autor{ height:20px !important;}
-			.testi_maincnt .div22{ height:7.5px !important;}
-			.testi_maincnt{ height:106px !important;}
-			.popular_places_row tr td, .bkd tr td{
-				display:inline !important;
-			}
-			table[class="body"] .header .container{ 
-			border:none !important;
-			}
-			.popular_places .mp_lf {
-    padding-left: 0;
-    width: 100% !important;
-	}
-	.testi_maincnt tr:first-child .div22, .testi_maincnt tr:first-child .div15, .testi_maincnt tr:first-child{
-		display:none !important;
-	}
-	.popular_places .mp_lf {
-    padding-left: 0;
-    width: 95% !important;
-}
-	table[class="body"] .popular_places .popular_places_row  tr  td.div30{ display:none !important;}
-	table[class="body"] .mostpopular table.columns td.div30{ display:none !important;}
-    }
-    
-    /* end template specific------------------------------------------------*/  
-    
-    </style>
-</head>
-<body>
-    
+    /* end template specific------------------------------------------------*/
+</style>
+    </head>
+    <body class="my-template">
     <table class="body">
-        <tr>
-            <td class="center" align="center" valign="top">
-                <center>
-        
-                  <table class="row header">
+      <tr>
+        <td class="center" align="center" valign="top"><center>
+            <table class="row header">
+            <tr>
+                <td class="center" align="center"><center>
+                    <table class="container">
                     <tr>
-                      <td class="center" align="center">
-                        <center>
-        
-                          <table class="container">
+                        <td class="wrapper last"><table class="twelve columns">
+                            <tbody>
                             <tr>
-                              <td class="wrapper last" bgcolor="#3699c3">
-        
-                                <table class="twelve columns">
-                                  <tr>
-                                  	<td class="div30" width="30"></td>
-                                    <td class="header_txt">
-                                      Travel
-                                    </td>
-                                    <td class="header_link" style="text-align:right; vertical-align:middle;">
-                                      No Images? <a href="javascript://" style="#ffffff">Click here</a>
-                                    </td>
-                                    <td class="div30" width="30"></td>
+                                <td class="one sub-columns"></td>
+                                <td class="five sub-columns travel text-align-left"><span class="color-white"> Travel</span></td>
+                                <td class="five sub-columns last" style="text-align:right; vertical-align:middle;"><span class="template-label color-white">No Images? <a href="javascript://" class="color-white">Click here</a></span></td>
+                                <td class="one sub-columns"></td>
+                                <td class="expander"></td>
+                              </tr>
+                          </tbody>
+                          </table></td>
+                      </tr>
+                  </table>
+                  </center></td>
+              </tr>
+          </table>
+            <table class="container">
+            <tr>
+                <td><table class="row">
+                    <tr>
+                    <td class="wrapper last"><table class="twelve columns">
+                        <tr>
+                        <td><table class="twelve columns">
+                            <tbody>
+                              <tr>
+                                <td class="last"><table class="twelve columns">
+                                    <tbody>
+                                      <tr>
+                                        <td class="twelve wrapper last columns center"><center>
+                                            <div class="logo"> <img src="images/logos/logo.jpg" class="center" /> </div>
+                                          </center></td>
+                                      </tr>
+                                    </tbody>
+                                  </table></td>
+                              </tr>
+                            </tbody>
+                          </table></td>
+                        <td class="expander"></td>
+                      </tr>
+                      </table></td>
+                  </tr>
+                  </table>
+                <table class="row">
+                    <tr>
+                    <td class="wrapper last"><table class="twelve columns">
+                        <tr>
+                        <td><div class="banner-image-wrap"> <img class="center" src="images/portraits/banner.jpg"> </div></td>
+                      </tr>
+                      </table></td>
+                  </tr>
+                  </table>
+                <table class="row">
+                    <tr>
+                    <td class="wrapper last"><table class="twelve columns">
+                        <tr>
+                        <td  align="center"><table>
+                            <tr>
+                              <td class="center"><center>
+                                  <h4 class="center"><span class="color-black">DISCOUNT ON THE GO</span></h4>
+                                  <h6 class="center"><i><span class="color-black">Get 20% Off On Booking</span></i></h6>
+                                  <p class="center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                                </center></td>
+                              <td></td>
+                            </tr>
+                          </table></td>
+                        <td class="expander"></td>
+                      </tr>
+                      </table>
+                        <table class="twelve columns">
+                        <tbody>
+                            <tr>
+                            <td class="last"><table class="four columns book-button">
+                                <tbody>
+                                <tr>
+                                    <td><table class="button alert">
+                                        <tbody>
+                                        <tr>
+                                            <td><a href="javascript://">BOOK YOUR TRAVEL</a></td>
+                                          </tr>
+                                      </tbody>
+                                      </table></td>
                                     <td class="expander"></td>
                                   </tr>
-                                </table>
-        
-                              </td>
-                            </tr>
-                          </table>
-        
-                        </center>
-                      </td>
-                    </tr>
+                              </tbody>
+                              </table></td>
+                          </tr>
+                          </tbody>
+                      </table>
+                        <hr class="section"></td>
+                  </tr>
                   </table>
-        
-                  <table class="container" width="580">
+                <table class="row">
                     <tr>
-                      <td>
-        
-                        <table class="row">
-                          <tr>
-                            <td class="wrapper last">
-        
-                              <table class="twelve columns">
-                                <tr>
-                                <td class="div180" width="180"></td>
-                                  <td class="logo_area" width="203" height="49" align="center">
-                                 	 
-                               	  	    <img src="images/logos/logo.jpg" width="203" height="49" alt="logo" />
-                                     
-                                  </td>
-                                  <td class="div180" width="180"></td>
-                                </tr>
-                                
-                              </table>
-                              
-                              <table class="twelve columns banner_tbl">
-                              	<tr>
-
-                               	  <td class="div30" width="30"></td>
-                                    <td class="banner">
-                               	    <img src="images/portraits/banner.jpg" width="520" style="float:none; display:block;" alt="" /></td>
-                                   <td class="div30" width="30"></td>
-                                </tr>
-                              
-                              </table>
-                              
-                              <table class="twelve columns dsc">
-                              	<tr>
-
-                               	  <td class="div30" width="30"></td>
-                                    <td class="discount" align="center">
-                                    	<table class="twelve columns">
-                                        	<tr>
-                                            	<td height="10"></td>
-                                            </tr>
-                                        	<tr>
-                               	    	      <td class="div30" width="30"></td><td> <h1>Discount on the go</h1></td><td  class="div30"   width="30"></td>
-                                          </tr>
-                                             <tr>
-                               	    	      <td class="div30" width="30"></td><td><h2>Get 20% Off On Booking</h2></td><td width="30"></td>
-                                             </tr>
-                                             <tr>
-                                             	<td height="15"></td>
-                                             </tr>
-                                             <tr>
-                                             <td class="div30" width="30"></td>
-                               	    	      <td class="dis_cnt">
-                                               
-                                        	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                                        </td>
-                                        <td class="div30" width="30"></td>
-                                             </tr>
-                                             	<tr>
-                                                	<td height="25"></td>
-                                                </tr>
-                                             <tr>
-                                             <td class="div30"  width="30"></td>
-                                             	<td style="border-bottom:1px solid #e6e6e6;">
-                                                	 <table class="bkd" width="520" cellspacing="0" cellpadding="0" >
-                                                      <tr>
-                                                        
-                                                        <td class="div30" width="30"></td>
-                                                         <td class="div165" width="165"></td>
-                                                               <td>
-                                                               
-                                                                <table class="tiny-button">
-                                      <tr>
-                                        <td class="bkdd">
-                                          <a href="javascript://" class="book_traver_btn">BOOK YOUR TRAVEL</a>
-                                        </td>
-                                      </tr>
-                                    </table>
-
-                                              	
-                                        		
-                                                        </td>
-                                                              <td class="div165" width="165"></td>
-                                                              <td class="div30" width="30"></td>
-                                                      </tr>
-                                                      <tr>
-                                                      	<td height="40">&nbsp; </td>
-                                                      </tr>
-                                                    </table>
-
-
-                                             	</td>
-                                                <td class="div30" width="30"></td>
-                                             </tr>
-                                       
-                                       
-                                        
-                                        </table>
-                                    </td>
-                                   <td class="div30" width="30"></td>
-                                </tr>
-                              
-                              </table>
-                              
-        
-                            </td>
-                          </tr>
-                        </table>
-        
-                        <table class="row callout most_popular">
-                          <tr>
-                          	<td>
-                            	<table class="most_popular_top" width="580px" border="0" cellspacing="0" cellpadding="0">
-                                	<tr>
-                                    	<td height="30" colspan="3"></td>
-                                    </tr>
-                                  <tr>
-                                    <td class="div30" width="30">&nbsp;</td>
-                                    <td><h1>most popular</h1></td>
-                                    <td class="div30" width="30">&nbsp;</td>
-                                  </tr>
-                                  <tr>
-                                    <td class="div30" width="30">&nbsp;</td>
-                                    <td class="popular_cnt">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</td>
-                                    <td class="div30" width="30">&nbsp;</td>
-                                  </tr>
-                                  <tr>
-                                    	<td height="20" colspan="3"></td>
-                                  </tr>
-                                </table>
-
-                            </td>
-                          </tr>
-                        </table>
-        
-                        <!---------->
-                        <table class="row mostpopular">
-                          <tbody>
-                          <tr>
-                            <td class="wrapper">
-        
-                              <table class="six columns">
-                                <tbody><tr>
-                                <td class="div30" width="30">&nbsp;</td>
-                                  <td class="mp_lf">
-            
-                                  <table class="mp_lf_inner">
-                                    <tr>
-                                      <td class="last right-text-pad">
-                                         <table class="mp_table"  border="0" cellspacing="0" cellpadding="0">
-                                          <tr>
-                                            <td class="mp_table_td mp_cnt">
-                                            <img src="images/image1.jpg" width="252" height="206" alt="" /><p>&nbsp; </p>
-                                            <h1>Lorem Ipsum is simply</h1>
-                                                <p></p>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy </p></td>
-                                          </tr>
-                                        </table>
-
-                                   	  	
-                                      </td>
-                                      <td class="expander"></td>
-                                    </tr>
-                                  </table>
-            
-                                </td>
-                                  <td class="expander"></td>
-                                </tr>
-                              </tbody></table>
-        
-                            </td>
-                            <td class="wrapper last">
-        
-                              <table class="six columns">
-                                <tbody><tr>
-                                  <td class="last right-text-pad">
-                                         <table class="mp_table"  border="0" cellspacing="0" cellpadding="0">
-                                          <tr>
-                                            <td class="mp_table_td mp_cnt">
-                                            <img src="images/image2.jpg" width="252" height="206" alt="" /><p>&nbsp; </p>
-                                            <h1>Lorem Ipsum is simply</h1>
-                                                <p></p>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy </p></td>
-                                          </tr>
-                                          
-                                         
-                                        </table>
-
-                                   	  	
-                                      </td>
-                                  <td class="div30" width="30">&nbsp;</td>
-                                  <td class="expander"></td>
-                                </tr>
-                              </tbody></table>
-        
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="wrapper">
-        
-                              <table class="six columns">
-                                <tbody><tr>
-                                <td class="div30" width="30">&nbsp;</td>
-                                  <td class="mp_lf">
-            
-                                  <table class="mp_lf_inner">
-                                    <tr>
-                                      <td class="last right-text-pad">
-                                         <table class="mp_table"  border="0" cellspacing="0" cellpadding="0">
-                                          <tr>
-                                            <td class="mp_table_td mp_cnt">
-                                            <img src="images/image3.jpg" width="252" height="206" alt="" /><p>&nbsp; </p>
-                                            <h1>Lorem Ipsum is simply</h1>
-                                                <p></p>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy </p></td>
-                                          </tr>
-                                        </table>
-
-                                   	  	
-                                      </td>
-                                      <td class="expander"></td>
-                                    </tr>
-                                  </table>
-            
-                                </td>
-                                  <td class="expander"></td>
-                                </tr>
-                              </tbody></table>
-        
-                            </td>
-                            <td class="wrapper last">
-        
-                              <table class="six columns">
-                                <tbody><tr>
-                                  <td class="last right-text-pad">
-                                         <table class="mp_table"  border="0" cellspacing="0" cellpadding="0">
-                                          <tr>
-                                            <td class="mp_table_td mp_cnt">
-                                            <img src="images/image4.jpg" width="252" height="206" alt="" /><p>&nbsp; </p>
-                                            <h1>Lorem Ipsum is simply</h1>
-                                                <p></p>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy </p></td>
-                                          </tr>
-                                          
-                                         
-                                        </table>
-
-                                   	  	
-                                      </td>
-                                  <td class="div30" width="30">&nbsp;</td>
-                                  <td class="expander"></td>
-                                </tr>
-                              </tbody></table>
-        
-                            </td>
-                          </tr>
-                        </tbody>
-                        </table>
-                        
-                        
-                        <!----------->
-        
-        				<table class="row bluePart">
-                        	<tr>
-                            	<td class="div30" width="30"></td>
-                                <td class="blue_parttxt" >
-                                	<table  class="bluePart" width="" border="0" cellspacing="0" cellpadding="0">
-                                    	<tr>
-                                        	<td height="35" colspan="3"></td>
-                                        </tr>
-                                      <tr>
-                                        <td class="div30" width="30"></td><td class="promotion_heading">Promotional Video</td><td width="30"></td>
-                                      </tr>
-                                      <tr>
-                                      	<td height="15" colspan="3"></td>
-                                      </tr>
-                                      <tr>
-                                      <td class="div30" width="30"></td>
-                                        <td class="promotion_cnt">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard...
-                                        </td>
-                                        <td class="div30" width="30"></td>
-                                      </tr>
-                                      <tr>
-                                        	<td height="35" colspan="3"></td>
-                                      </tr>
-                                    </table>
-
-                                </td>
-                                <td class="div30" width="30"></td>
-                            </tr>
-                        
-                        
-                        </table>
-                        
-                        <table class="row video_section">
-                        	<tr>
-                            	<td>
-                           	    <img src="images/video_image.jpg" width="580" height="" alt="" /></td>
-                            </tr>
-                        
-                        </table>
-                        
-                        <table class="row client_say" width="580">
-                        	
-                            <tr>
-                            	<td>
-                                	<table width="580" class="client_say_top">
-                       				  <tr>
-                            	<td class="div30" width="30"></td>
-                            	<td>
-                           	    	<table  border="0" cellspacing="0" cellpadding="0">
-                                      <tr>
-                                        <td height="35">&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td class="client_say_heading">Our Client say</td>
-                                      </tr>
-                                      <tr>
-                                        <td height="20">&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td class="client_say_cnt">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</td>
-                                      </tr>
-                                      
-                                  </table>
-
-                                </td>
-                                <td width="30"></td>
-                            </tr>
-                            		</table>
-                                    <table width="580" class="testimonial">
-                                    	<tr>
-                                        	<td>
-                                            	<table width="580" class="testimonial_row" cellpadding="0" cellspacing="">
-                                    	    <tr><td height="38" colspan="8"></td></tr>
-                                    	    <tr>
-                                       	  <td class="div45" width="45"></td>
-                                            <td class="prof_image">
-                                   		    <img src="images/profile_image1.jpg" width="113" height="113" alt="" />
-                                            </td>
-                                            <td class="speak_node" align="right" height="113">
-                                       	    <img src="images/node.png" width="16" height="113" alt="" />
-                                            </td>
-                                        	<td>
-                                            	<table class="testi_maincnt" width="358"  cellspacing="0" cellpadding="0">
-                                                      <tr>
-                                                        <td height="13" colspan="2" class="div22">&nbsp;  </td>
-                                                        <td class="div15" width="15"></td>
-                                                      </tr>
-                                                      <tr>
-                                                        <td class="div22" width="22">&nbsp;</td>
-                                                        <td class="testa_cnt">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's stan</td>
-                                                        <td class="div15" width="15">&nbsp;</td>
-                                                      </tr>
-                                                      
-                                                      <tr>
-                                                        <td class="div22" width="22" >&nbsp;</td>
-                                                        <td class="autor" height="24" style="vertical-align:middle"><a href="javascript://" style="color:#c80000;">Mr. Pitter Rich Wan</a></td>
-                                                        <td class="div15" width="15">&nbsp;</td>
-                                                      </tr>
-                                                      <tr>
-                                                        <td class="div22" width="22" height="7"></td>
-                                                        <td></td>
-                                                        <td class="div15" width="15"></td>
-                                                      </tr>
-                                              </table>
-
-                                            </td>
-                                            <td class="div45" width="45"></td>
-                                        </tr>
-                                        	</table>
-                                            	
-                                                
-                                        	</td>
-                                        </tr>
-                                        <tr>
-                                        	<td>
-                                            	<table class="testimonial_row" cellpadding="0" cellspacing="">
-                                    	    <tr><td height="38" colspan="8"></td></tr>
-                                    	    <tr>
-                                       	 		<td class="div45" width="45"></td>
-                                                    <td>
-                                                        <table class="testi_maincnt testi_maincnt_right" width="358"  cellspacing="0" cellpadding="0">
-                                                              <tr>
-                                                                <td height="13" colspan="3" class="div22">&nbsp;  </td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td class="div22" width="22">&nbsp; </td>
-                                                                <td class="testa_cnt">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's stan</td>
-                                                                <td class="div15" width="15">&nbsp; </td>
-                                                              </tr>
-                                                              
-                                                              <tr>
-                                                                <td class="div22" width="22" >&nbsp;</td>
-                                                                <td class="autor" height="24" style="vertical-align:middle"><a href="javascript://" style="color:#c80000;">Mrs. Lusia Cara Kent</a></td>
-                                                                <td class="div15" width="15">&nbsp;</td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td height="7" colspan="3" class="div22"></td>
-                                                              </tr>
-                                                      </table>
-        
-                                                    </td>
-                                                    <td class="speak_node speak_node_right" align="right" height="113">
-                                                    <img src="images/node_right.png" width="16" height="113" alt="" />
-                                                    </td>
-                                                    <td class="prof_image">
-                                                    <img src="images/profile_image2.jpg" width="113" height="113" alt="" />
-                                                    </td>
-                                                    
-                                        	
-                                            <td class="div45" width="45"></td>
-                                       		</tr>
-                                        	</table>
-                                            </td>
-                                        
-                                        </tr>
-                                        
-                                        <tr>
-                                        	<td>
-                                            	<table class="testimonial_row" width="580" cellpadding="0" cellspacing="">
-                                    	    <tr><td height="38" colspan="8"></td></tr>
-                                    	    <tr>
-                                       	  <td class="div45" width="45"></td>
-                                            <td class="prof_image">
-                                   		    <img src="images/profile_image3.jpg" width="113" height="113" alt="" />
-                                            </td>
-                                            <td class="speak_node" align="right" height="113">
-                                       	    <img src="images/node.png" width="16" height="113" alt="" />
-                                            </td>
-                                        	<td>
-                                            	<table class="testi_maincnt" width="358"  cellspacing="0" cellpadding="0">
-                                                      <tr>
-                                                        <td height="13" colspan="3" class="div22">&nbsp; </td>
-                                                      </tr>
-                                                      <tr>
-                                                        <td class="div22" width="22">&nbsp;</td>
-                                                        <td class="testa_cnt">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's stan</td>
-                                                        <td class="div15" width="15">&nbsp;</td>
-                                                      </tr>
-                                                      
-                                                      <tr>
-                                                        <td class="div22" width="22" >&nbsp;</td>
-                                                        <td class="autor" height="24" style="vertical-align:middle"><a href="#" style="#c80000;">Mr. Yayang Laurence Crew</a></td>
-                                                        <td class="div15" width="15">&nbsp;</td>
-                                                      </tr>
-                                                      <tr>
-                                                        <td height="7" colspan="3" class="div22"></td>
-                                                      </tr>
-                                              </table>
-
-                                            </td>
-                                            <td class="div45" width="45"></td>
-                                        </tr>
-                                        	</table>
-                                            	
-                                                
-                                        	</td>
-                                        </tr>
-                                       
-                                    
-                                    
-                                    </table>
-                            	</td>
-                            </tr>
-                            <tr><td height="50"></td></tr>
-                        
-                        </table>
-                        
-                        <table cellpadding="0" cellspacing="0" border="0" class="row footer_top">
-                        	<tr>
-                        		<td class="divheight30" height="30" colspan="5"></td>
-                        	</tr>
-                            <tr>
-                            	<td class="div30" width="30"></td>
-                                <td class="div157" width="157"></td>
-                                <td>
-                                	
-                                    	<table class="social_links"  width="200" border="0" cellspacing="0" cellpadding="0">
-                                          <tr>
-                                            <td style="color:#ffffff;">Connect With Us:</td>
-                                            <td>&nbsp;</td>
-                                            <td width="25"><a href="javascript://"><img src="images/social/facebook.png" width="20" height="20" alt="" /></a></td>
-                                            <td width="25"><a href="javascript://"><img src="images/social/twiter.png" width="20" height="20" alt="" /></a></td>
-                                            <td width="25"><a href="javascript://"><img src="images/social/linkin.png" width="20" height="20" alt="" /></a></td>
-                                          </tr>
-                                          
-                                          
-                                          
-                                          
-                                        </table>
-
-                                   
-                                </td>
-                                <td class="div157" width="157"></td>
-                                <td class="div30" width="30"></td>
-                            </tr>
-                            <tr><td height="11" colspan="4"></td></tr>
-                             <tr>
-                            	<td class="div30" width="30"></td>
-                                <td colspan="3">
-                                   <table class="contact_details" width="" border="0" cellspacing="0" cellpadding="0">
-                                  <tr>
-                                    <td align="center" class="phno">Contact Info: Phone: 408.341.0600  | &nbsp;Email:<a href="mailto:dev@ontraport.com.com" style="#ffffff"> hseldon@trantor.com</a></td>
-                                    </tr>
-                                </table>
-
-                                 </td>
-                                <td class="div30" width="30"></td>
-                            </tr>
-                            <tr>
-                                                <td height="30" colspan="5"></td>
-                                           </tr>
-                        </table>
-                        
-                        <table class="row footer_bottom">
-                          <tr>
-                            <td class="wrapper last">
-        
-                              <table class="twelve columns">
-                              <tr>
-                              	<td class="footer_txt" colspan="4">You are receiving this because loren vestibulum et gravida</td>
-                              </tr>
-                                <tr>
-                                  <td class="footer_menu" align="center" colspan="4">
-                                    
-                                      <p style="text-align:center;"><a href="javascript://" style="color:#2c2c2c ">Terms</a> | <a href="javascript://" style="color:#2c2c2c">Privacy</a> | <a href="javascript://" style="color:#2c2c2c "> Unsubscribe</a></p>
-                                    
-                                  </td>
-                                  <td class="expander" ></td>
-                                </tr>
-                              </table>
-        
-                            </td>
-                          </tr>
-                        </table>
-        
-                      <!-- container end below -->
-                      </td>
-                    </tr>
+                    <td class="wrapper last"><table class="twelve columns">
+                        <tr>
+                        <td><center>
+                            <h4 class="color-black center">MOST POPULAR</h4>
+                            <p class="center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
+                          </center></td>
+                      </tr>
+                      </table></td>
+                  </tr>
                   </table>
-        
-                </center>
-            </td>
-        </tr>
+                <table class="row most-popular">
+                    <tr>
+                    <td class="wrapper"><table class="six columns">
+                        <tr>
+                        <td class="popular-image-area"><div class="popular-image-wrap"><img src="images/image1.jpg" /></div>
+                            <br/>
+                            <h6 class="center"><b>Lorem Ipsum is simply</b></h6>
+                            <p class="center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p></td>
+                      </tr>
+                      </table></td>
+                    <td class="wrapper last"><table class="six columns">
+                        <tr>
+                        <td class=""><div class="popular-image-wrap"><img src="images/image2.jpg" /></div>
+                            <br/>
+                            <h6 class="center"><b>Lorem Ipsum is simply</b></h6>
+                            <p class="center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p></td>
+                      </tr>
+                      </table></td>
+                  </tr>
+                    <tr>
+                    <td class="wrapper"><table class="six columns">
+                        <tr>
+                        <td class=""><div class="popular-image-wrap"><img src="images/image3.jpg" /></div>
+                            <br/>
+                            <h6 class="center"><b>Lorem Ipsum is simply</b></h6>
+                            <p class="center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p></td>
+                      </tr>
+                      </table></td>
+                    <td class="wrapper last"><table class="six columns">
+                        <tr>
+                        <td class=""><div class="popular-image-wrap"><img src="images/image4.jpg" /></div>
+                            <br/>
+                            <h6 class="center"><b>Lorem Ipsum is simply</b></h6>
+                            <p class="center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p></td>
+                      </tr>
+                      </table></td>
+                  </tr>
+                  </table>
+                <table class="row">
+                    <tbody>
+                    <tr>
+                        <td class="wrapper center last"><table class="twelve columns center">
+                            <tbody>
+                            <tr>
+                                <td class="wrapper last blue-part"><center>
+                                    <h4 class="color-white center"><b>PROMOTIONAL VIDEO</b></h4>
+                                    <p class="center color-fade-blue"><b class="color-fade-blue">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</b></p>
+                                  </center></td>
+                                <td class="expander"></td>
+                              </tr>
+                          </tbody>
+                          </table></td>
+                      </tr>
+                  </tbody>
+                  </table>
+                <table class="row">
+                    <tbody>
+                    <tr>
+                        <td><table class="twelve columns">
+                            <tbody>
+                            <tr>
+                                <td class="center"><center>
+                                    <div class="video-image-wrap"><img class="center" src="images/video_image.jpg"/></div>
+                                  </center></td>
+                                <td class="expander"></td>
+                              </tr>
+                          </tbody>
+                          </table></td>
+                      </tr>
+                  </tbody>
+                  </table>
+                <table class="row client-say-top">
+                    <tbody>
+                    <tr>
+                        <td class="wrapper center last"><table class="twelve columns">
+                            <tbody>
+                            <tr>
+                                <td><center>
+                                    <h4 class="center"><b>OUR CLIENT SAY</b></h4>
+                                    <p class="center"><b>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</b></p>
+                                  </center></td>
+                              </tr>
+                          </tbody>
+                          </table></td>
+                      </tr>
+                  </tbody>
+                  </table>
+                <table class="row tesimonial">
+                    <tr>
+                    <td class="wrapper last"><table class="twelve columns client-say">
+                        <tbody>
+                        <tr>
+                            <td class="three"><div class="profile-image-wrap"><img src="images/profile_image1.jpg"></div></td>
+                            <td class="expander"></td>
+                            <td class="one hide-for-small arrow"><img src="images/node.png"></td>
+                            <td class="eight panel client-content"><p class="testimonials-texts"><i>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's stan</i></p>
+                            <p class="testimonials-texts"><span class="color-red">MR. PITTER RICH WAN</span></p></td>
+                            <td class="expander"></td>
+                          </tr>
+                      </tbody>
+                      </table></td>
+                  </tr>
+                    <tr>
+                    <td class="wrapper last"><table class="twelve columns client-say">
+                        <tbody>
+                        <tr>
+                            <td class="eight panel client-content"><p class="testimonials-texts"><i>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's stan</i></p>
+                            <p class="testimonials-texts"><span class="color-red">MRS LUSIA CARA KENT</span></p></td>
+                            <td class="one hide-for-small arrow-right"><img src="images/node_right.png"></td>
+                            <td class="expander"></td>
+                            <td class="three"><div class="profile-image-wrap profile-image-wrap-right"><img src="images/profile_image2.jpg"></div></td>
+                            <td class="expander"></td>
+                            <td class="expander"></td>
+                          </tr>
+                      </tbody>
+                      </table></td>
+                  </tr>
+                    <tr>
+                    <td class="wrapper last"><table class="twelve columns client-say">
+                        <tbody>
+                        <tr>
+                            <td class="three"><div class="profile-image-wrap"><img src="images/profile_image3.jpg"></div></td>
+                            <td class="expander"></td>
+                            <td class="one hide-for-small arrow"><img src="images/node.png"></td>
+                            <td class="expander"></td>
+                            <td class="eight panel client-content"><p class="testimonials-texts"><i>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's stan</i></p>
+                            <p class="testimonials-texts"><span class="color-red">MR. YAYANG LAURENCE CREW</span></p></td>
+                            <td class="expander"></td>
+                          </tr>
+                      </tbody>
+                      </table></td>
+                  </tr>
+                  </table>
+                <table class="row">
+                    <tbody>
+                    <tr>
+                        <td class="wrapper last"><table class="twelve columns blue-part">
+                            <tr>
+                            <td><table class="block-grid two-up social-links ">
+                                <tr>
+                                <td class="wrapper connect-text" style="text-align:right;"><p align="right">CONNECT WITH US:</p></td>
+                                <td class="wrapper social-icon last" ><a href="javascript://"><img src="images/social/facebook.png" /></a> <a href="javascript://"><img src="images/social/linkin.png" /></a> <a href="javascript://"><img src="images/social/twiter.png" /></a></td>
+                              </tr>
+                              </table></td>
+                            <td class="expander"></td>
+                          </tr>
+                          </table></td>
+                        <td class="expander"></td>
+                      </tr>
+                    <tr>
+                        <td><table class="twelve columns blue-part">
+                            <tr>
+                            <td class="center twelve  sub-columns last  email-text" colspan="2"><p class="center">Contact Info: Phone: 408.341.0600  | </p>
+                                <p> &nbsp; Email: <a href="mailto:hseldon@trantor.com"> hseldon@trantor.com</a></p></td>
+                          </tr>
+                          </table></td>
+                      </tr>
+                  </tbody>
+                  </table>
+                <table class="row footer-bottom">
+                    <tr>
+                    <td class="wrapper last"><table class="twelve columns">
+                        <tr>
+                        <td><p class="center">You are receiving this because loren vestibulum et gravida</p></td>
+                      </tr>
+                        <tr>
+                        <td align="center"><center>
+                            <p class="center" style="text-align:center;"><a href="javascript://">Terms  |</a> <a href="javascript://"> Privacy |</a> <a href="javascript://">Unsubscribe</a></p>
+                          </center></td>
+                        <td class="expander"></td>
+                      </tr>
+                      </table></td>
+                  </tr>
+                  </table>
+                
+                <!-- container end below --></td>
+              </tr>
+          </table>
+          </center></td>
+      </tr>
     </table>
-    
 </body>
 </html>
