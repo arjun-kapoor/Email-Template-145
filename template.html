@@ -33,15 +33,19 @@ it should be part of every ONTRAPORT email template email us your suggestions at
 .my-template {
 	font-family:Arial, Helvetica, sans-serif;
 }
+.my-template h1, .my-template h2, .my-template h3, .my-template h4, .my-template h5, .my-template h6, .my-template p{
+	text-align:center;
+}
 .my-template p {
 	font-size:13px;
 	color: #555555;
 }
-.my-template .header .container, .my-template .blue-part, .social-links {
-	background-color:#3699c3;
-}
+
 .my-template .blue-part, .my-template .social-links {
 	border:none;
+}
+.my-template .client-content p{
+	text-align:left;
 }
 .client-say .arrow img {
 	float:right;
@@ -51,11 +55,7 @@ it should be part of every ONTRAPORT email template email us your suggestions at
 	float:left;
 	margin-left:-1px;
 }
-.my-template .client-content {
-	border:1px solid #e6e6e6;
-	text-align:left;
-	background:#ffffff;
-}
+
 .testimonials-texts {
 	font-family:Georgia, "Times New Roman", Times, serif;
 	font-size:13px;
@@ -69,9 +69,7 @@ it should be part of every ONTRAPORT email template email us your suggestions at
 	width:100%;
 	padding-top:10px;
 }
-p.center {
-	text-align:center;
-}
+
 .my-template .color-red {
 	color:#c80000;
 	text-align:left;
@@ -87,9 +85,10 @@ p.center {
 	text-align:right;
 	color:#ffffff;
 }
-.my-template .color-white, .my-template .template-label a.color-white, .my-template .email-text p.center a, .my-template .blue-part .color-white b, .my-template .blue-part p a, .my-template .travel, .my-template .template-label, .my-template .template-label.color-white {
+.my-template .color-white, .my-template .template-label a.color-white, .my-template .email-text p.center a, .my-template .blue-part .color-white b, .my-template .blue-part p a, .my-template .travel, .my-template .template-label, .my-template .template-label.color-white, .color-white {
 	color:#ffffff ;
 }
+
 .footer-bottom p {
 	font-size:11px;
 	text-transform:uppercase;
@@ -98,15 +97,19 @@ p.center {
 	color:#2c2c2c;
 	text-transform:uppercase;
 }
-.my-template td.wrapper {
-	padding:10px 20px 0 0;
-}
+
 .my-template .color-black {
 	color:#555555;
 }
 .my-template .color-fade-blue {
 	color:#cbf0ff;
 	margin-bottom:0px;
+}
+.footer-bottom p, .footer-top p{
+	margin-bottom:0px;
+}
+.my-template td.wrapper{
+	padding:10px 20px 0 0;
 }
 .travel, .my-template .template-label {
 	color:#ffffff;
@@ -133,6 +136,23 @@ p.center {
 .popular-image-wrap {
 	width:280px;
 }
+.add-padding{
+	padding:10px;
+}
+ .my-template .my-panel{
+	background:none;
+	border:none;
+	background-color:transparent;
+}
+.my-template .header .container, .my-template .blue-part {
+	background-color:#3699c3;
+	overflow:hidden;
+}
+.my-template .client-content {
+	border:1px solid #e6e6e6;
+	text-align:left;
+	background:#ffffff;
+}
 
 /*template specific media quieries -------------------------------------*/
 @media only screen and (max-width: 600px) {
@@ -154,6 +174,9 @@ p.center {
 .footer-top .blue-part .social-links p {
 	margin-bottom:0px;
 }
+.my-template .my-panel{
+	padding:0px !important; 
+}
 }
 
 /* end template specific------------------------------------------------*/
@@ -172,8 +195,8 @@ p.center {
                         <tbody>
                           <tr>
                             <td class="one sub-columns"></td>
-                            <td class="five sub-columns travel text-align-left" style="color:#ffffff;"><span class="color-white" style="color:#ffffff;"> Travel</span></td>
-                            <td class="five sub-columns last" style="text-align:right; vertical-align:middle; color:#ffffff;"><span class="template-label color-white">No Images? <a href="javascript://" class="color-white" style="color:#ffffff;">Click here</a></span></td>
+                            <td class="five sub-columns travel text-align-left" ><span class="color-white" > Travel</span></td>
+                            <td class="five sub-columns last color-white" align="right" valign="middle" style="text-align:right; vertical-align:middle;"><span class="template-label color-white">No Images? <a href="javascript://" class="color-white">Click here</a></span></td>
                             <td class="one sub-columns"></td>
                             <td class="expander"></td>
                           </tr>
@@ -225,10 +248,10 @@ p.center {
                       <tr>
                         <td  align="center"><table>
                             <tr>
-                              <td class="center"><center>
-                                  <h4 class="center"><span class="color-black">DISCOUNT ON THE GO</span></h4>
-                                  <h6 class="center"><i><span class="color-black">Get 20% Off On Booking</span></i></h6>
-                                  <p class="center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                              <td class="center panel my-panel"><center>
+                                  <h4><span class="color-black">DISCOUNT ON THE GO</span></h4>
+                                  <h6><i><span class="color-black">Get 20% Off On Booking</span></i></h6>
+                                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
                                 </center></td>
                               <td></td>
                             </tr>
@@ -273,9 +296,9 @@ p.center {
                 <tr>
                   <td class="wrapper last"><table class="twelve columns">
                       <tr>
-                        <td><center>
-                            <h4 class="color-black center">MOST POPULAR</h4>
-                            <p class="center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
+                        <td class="center panel my-panel"><center>
+                            <h4><span class="color-black">MOST POPULAR</span></h4>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
                           </center></td>
                       </tr>
                     </table></td>
@@ -287,34 +310,34 @@ p.center {
                       <tr>
                         <td class="popular-image-area"><div class="popular-image-wrap"><img src="images/image1.jpg" /></div>
                           <br/>
-                          <h6 class="center"><b>Lorem Ipsum is simply</b></h6>
-                          <p class="center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p></td>
+                          <h6><b>Lorem Ipsum is simply</b></h6>
+                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p></td>
                       </tr>
                     </table></td>
                   <td class="wrapper last"><table class="six columns">
                       <tr>
-                        <td class=""><div class="popular-image-wrap"><img src="images/image2.jpg" /></div>
+                        <td><div class="popular-image-wrap"><img src="images/image2.jpg" /></div>
                           <br/>
-                          <h6 class="center"><b>Lorem Ipsum is simply</b></h6>
-                          <p class="center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p></td>
+                          <h6><b>Lorem Ipsum is simply</b></h6>
+                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p></td>
                       </tr>
                     </table></td>
                 </tr>
                 <tr>
                   <td class="wrapper"><table class="six columns">
                       <tr>
-                        <td class=""><div class="popular-image-wrap"><img src="images/image3.jpg" /></div>
+                        <td><div class="popular-image-wrap"><img src="images/image3.jpg" /></div>
                           <br/>
-                          <h6 class="center"><b>Lorem Ipsum is simply</b></h6>
-                          <p class="center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p></td>
+                          <h6><b>Lorem Ipsum is simply</b></h6>
+                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p></td>
                       </tr>
                     </table></td>
                   <td class="wrapper last"><table class="six columns">
                       <tr>
-                        <td class=""><div class="popular-image-wrap"><img src="images/image4.jpg" /></div>
+                        <td><div class="popular-image-wrap"><img src="images/image4.jpg" /></div>
                           <br/>
-                          <h6 class="center"><b>Lorem Ipsum is simply</b></h6>
-                          <p class="center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p></td>
+                          <h6><b>Lorem Ipsum is simply</b></h6>
+                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p></td>
                       </tr>
                     </table></td>
                 </tr>
@@ -325,9 +348,9 @@ p.center {
                     <td class="wrapper center last"><table class="twelve columns center">
                         <tbody>
                           <tr>
-                            <td class="wrapper last blue-part"><center>
-                                <h4 class="color-white center" style="color:#ffffff;"><b style="color:#ffffff;">PROMOTIONAL VIDEO</b></h4>
-                                <p class="center text-pad color-fade-blue"><b class="color-fade-blue">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard. </b></p>
+                            <td class="wrapper last  color-white panel my-panel blue-part"><center>
+                                <h4><span class="color-white"><b>PROMOTIONAL VIDEO</b></span></h4>
+                                <p><span class="color-fade-blue"><b>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard. </b></span></p>
                               </center></td>
                             <td class="expander"></td>
                           </tr>
@@ -358,9 +381,9 @@ p.center {
                     <td class="wrapper center last"><table class="twelve columns">
                         <tbody>
                           <tr>
-                            <td><center>
-                                <h4 class="center"><b>OUR CLIENT SAY</b></h4>
-                                <p class="center"><b>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</b></p>
+                            <td class="center panel my-panel"><center>
+                                <h4><span class="color-black"><b>OUR CLIENT SAY</b></span></h4>
+                                <p><b>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</b></p>
                               </center></td>
                           </tr>
                         </tbody>
@@ -393,7 +416,6 @@ p.center {
                           <td class="expander"></td>
                           <td class="three"><div class="profile-image-wrap profile-image-wrap-right"><img src="images/profile_image2.jpg"></div></td>
                           <td class="expander"></td>
-                          <td class="expander"></td>
                         </tr>
                       </tbody>
                     </table></td>
@@ -419,10 +441,10 @@ p.center {
                   <tr>
                     <td class="wrapper last"><table class="twelve columns blue-part blue-part-top">
                         <tr>
-                          <td><table class="block-grid two-up social-links ">
+                          <td> <table class="block-grid two-up">
                               <tr>
                                 <td class="wrapper connect-text last" style="text-align:right;"><p align="right">CONNECT WITH US:</p></td>
-                                <td class="wrapper social-icon" ><a href="javascript://"><img src="images/social/facebook.png" /></a> <a href="javascript://"><img src="images/social/linkin.png" /></a> <a href="javascript://"><img src="images/social/twiter.png" /></a></td>
+                                <td class="wrapper last social-icon" ><a href="javascript://"><img src="images/social/facebook.png" /></a> <a href="javascript://"><img src="images/social/linkin.png" /></a> <a href="javascript://"><img src="images/social/twiter.png" /></a></td>
                               </tr>
                             </table></td>
                           <td class="expander"></td>
@@ -435,7 +457,7 @@ p.center {
                         <tr>
                           <td><table class="block-grid two-up social-address">
                               <tr>
-                                <td class="center twelve  sub-columns last  email-text" colspan="2"><p class="center">Contact Info: Phone: 408.341.0600  | &nbsp; Email: <a href="mailto:hseldon@trantor.com" style="color:#ffffff;"> hseldon@trantor.com</a></p></td>
+                                <td class="center twelve email-text"><center><p><span class="color-white">Contact Info: Phone: 408.341.0600  | &nbsp; Email: <a href="mailto:hseldon@trantor.com" class="color-white"> hseldon@trantor.com</a></span></p></center></td>
                               </tr>
                             </table></td>
                         </tr>
@@ -447,11 +469,11 @@ p.center {
                 <tr>
                   <td class="wrapper last"><table class="twelve columns">
                       <tr>
-                        <td><p class="center">You are receiving this because loren vestibulum et gravida</p></td>
+                        <td class="center panel my-panel"><center><p>You are receiving this because loren vestibulum et gravida</p></center></td>
                       </tr>
                       <tr>
-                        <td align="center"><center>
-                            <p class="center" style="text-align:center;"><a href="javascript://">Terms  |</a> <a href="javascript://"> Privacy |</a> <a href="javascript://">Unsubscribe</a></p>
+                        <td class="center" align="center"><center>
+                            <p style="text-align:center;"><a href="javascript://">Terms  |</a> <a href="javascript://"> Privacy |</a> <a href="javascript://">Unsubscribe</a></p>
                           </center></td>
                         <td class="expander"></td>
                       </tr>
