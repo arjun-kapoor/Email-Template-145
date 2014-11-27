@@ -30,152 +30,200 @@ it should be part of every ONTRAPORT email template email us your suggestions at
 
 /* start template specific css -----------------------------------------*/
 
+
+
 .my-template {
-	font-family:Arial, Helvetica, sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
 }
-.my-template h1, .my-template h2, .my-template h3, .my-template h4, .my-template h5, .my-template h6, .my-template p{
-	text-align:center;
+.my-template h1, .my-template h2, .my-template h3, .my-template h4, .my-template h5, .my-template h6, .my-template p {
+	text-align: center;
 }
 .my-template p {
-	font-size:13px;
+	font-size: 13px;
 	color: #555555;
 }
-
 .my-template .blue-part, .my-template .social-links {
-	border:none;
+	border: none;
 }
-.my-template .client-content p{
-	text-align:left;
+.my-template .client-content p {
+	text-align: left;
 }
 .client-say .arrow img {
-	float:right;
-	margin-right:-1px;
+	float: right;
+	margin-right: -1px;
+	z-index: 999;
 }
 .client-say .arrow-right img {
-	float:left;
-	margin-left:-1px;
+	float: left;
+	margin-left: -1px;
 }
-
 .testimonials-texts {
-	font-family:Georgia, "Times New Roman", Times, serif;
-	font-size:13px;
-	text-align:left;
-	color:#7a7a7a;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 13px;
+	text-align: left;
+	color: #7a7a7a;
 }
 .most-popular h6 {
-	font-size:14px;
-	text-transform:uppercase;
-	clear:both;
-	width:100%;
-	padding-top:10px;
+	font-size: 14px;
+	text-transform: uppercase;
+	clear: both;
+	width: 100%;
+	padding-top: 10px;
 }
-
 .my-template .color-red {
-	color:#c80000;
-	text-align:left;
+	color: #c80000;
+	text-align: left;
 }
 .my-template .social-icon a, .my-template .email-text p, .my-template .email-text p a {
-	color:#ffffff;
-	display:inline-block;
-	font-size:12px;
-	width:auto;
-	text-align:center;
+	color: #ffffff;
+	display: inline-block;
+	font-size: 12px;
+	width: auto;
+	text-align: center;
 }
 .my-template .connect-text p {
-	text-align:right;
-	color:#ffffff;
+	text-align: right;
+	color: #ffffff;
 }
 .my-template .color-white, .my-template .template-label a.color-white, .my-template .email-text p.center a, .my-template .blue-part .color-white b, .my-template .blue-part p a, .my-template .travel, .my-template .template-label, .my-template .template-label.color-white, .color-white {
-	color:#ffffff ;
+	color: #ffffff;
 }
-
 .footer-bottom p {
-	font-size:11px;
-	text-transform:uppercase;
+	font-size: 11px;
+	text-transform: uppercase;
 }
 .footer-bottom a {
-	color:#2c2c2c;
-	text-transform:uppercase;
+	color: #2c2c2c;
+	text-transform: uppercase;
 }
-
 .my-template .color-black {
-	color:#555555;
+	color: #555555;
 }
 .my-template .color-fade-blue {
-	color:#cbf0ff;
-	margin-bottom:0px;
+	color: #cbf0ff;
+	margin-bottom: 0px;
 }
-.footer-bottom p, .footer-top p{
-	margin-bottom:0px;
+.footer-bottom p, .footer-top p {
+	margin-bottom: 0px;
 }
-.my-template td.wrapper{
-	padding:10px 20px 0 0;
+.my-template td.wrapper {
+	padding: 10px 20px 0 0;
 }
 .travel, .my-template .template-label {
-	color:#ffffff;
-	font-size:11px;
+	color: #ffffff;
+	font-size: 11px;
 }
 .my-template .social-icon {
-	text-align:left;
+	text-align: left;
 }
 .profile-image-wrap {
-	width:145px;
+	width: 145px;
 }
 .popular-image-area {
-	width:280px;
+	width: 280px;
 }
 .logo {
-	width:203px;
-	margin:0px auto;
+	width: 203px;
+	margin: 0px auto;
+	text-align: center;
+	display: inline-block;
+	float: none;
 }
 .my-template img {
-	border:0px;
-	margin:0px;
-	outline:0;
+	border: 0px;
+	margin: 0px;
+	outline: 0;
 }
 .popular-image-wrap {
-	width:280px;
+	width: 280px;
 }
-.add-padding{
-	padding:10px;
+.add-padding {
+	padding: 10px;
 }
- .my-template .my-panel{
-	background:none;
-	border:none;
-	background-color:transparent;
+.my-template .my-panel {
+	background: none;
+	border: none;
+	background-color: transparent;
+	border-spacing: 0px;
 }
 .my-template .header .container, .my-template .blue-part {
-	background-color:#3699c3;
-	overflow:hidden;
+	background-color: #3699c3;
+	overflow: hidden;
 }
 .my-template .client-content {
-	border:1px solid #e6e6e6;
-	text-align:left;
-	background:#ffffff;
+	border-right: 1px solid #e6e6e6;
+	border-top: 1px solid #e6e6e6;
+	border-bottom: 1px solid #e6e6e6;
+	border-left: none;
+	text-align: left;
+	background: #ffffff;
+	border-color: #e6e6e6;
+}
+table.container table.row {
+	border: none;
+	border-spacing: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+.my-template .client-say.client-say-even .client-content {
+	border-right: 0px;
+	border-left: 1px solid #e6e6e6;
+	border-color: #e6e6e6;
+}
+.my-template .arrow-right {
+	border-left: 1px solid #e6e6e6;
+}
+.my-template .arrow {
+	border-right: 1px solid #e6e6e6;
 }
 
 /*template specific media quieries -------------------------------------*/
 @media only screen and (max-width: 600px) {
 .my-template .connect-text p, .my-template .social-icon {
-	text-align:center !important;
+	text-align: center !important;
 }
-.video-image-wrap, .popular-image-area, .banner-image-wrap, .popular-image-wrap, .profile-image-wrap  {
-	width:100%;
+.video-image-wrap, .popular-image-area, .banner-image-wrap, .profile-image-wrap {
+	width: 100%;
+}
+.popular-image-wrap {
+	margin: 0px auto;
 }
 .banner-image-wrap {
-	width:100%;
+	width: 100%;
 }
 .video-image-wrap {
-	width:100%;
+	width: 100%;
 }
 .my-template p.color-fade-blue {
-	margin-bottom:0px;
+	margin-bottom: 0px;
 }
 .footer-top .blue-part .social-links p {
-	margin-bottom:0px;
+	margin-bottom: 0px;
 }
-.my-template .my-panel{
-	padding:0px !important; 
+.my-template .my-panel {
+	padding: 0px !important;
+}
+.my-template .client-content {
+	border: 1px solid #e6e6e6;
+	border-left: 1px solid #e6e6e6;
+}
+.my-template .client-say.client-say-even .client-conten, .my-template .client-content {
+	border: 1px solid #e6e6e6 !important;
+	border-right: 1px solid #e6e6e6;
+}
+.my-template .logo img {
+	display: inline-block;
+}
+.my-template .logo {
+	text-align: center;
+	width: 203px;
+}
+table[class="body"] .columns.logo-area {
+	display: inline-table !important;
+}
+.my-template .top-part {
+	width: 100%;
+	text-align: center;
 }
 }
 
@@ -213,18 +261,19 @@ it should be part of every ONTRAPORT email template email us your suggestions at
                 <tr>
                   <td class="wrapper last"><table class="twelve columns">
                       <tr>
-                        <td><table class="twelve columns">
+                        <td><table class="twelve columns top-part">
                             <tbody>
                               <tr>
-                                <td class="last"><table class="twelve columns">
+                                <td><table class="twelve columns logo-area">
                                     <tbody>
                                       <tr>
-                                        <td class="twelve wrapper last columns center"><center>
+                                        <td align="center" class="panel my-panel center"><center>
                                             <div class="logo"> <img src="images/logos/logo.jpg" class="center" /> </div>
                                           </center></td>
                                       </tr>
                                     </tbody>
                                   </table></td>
+                                <td class="expander"></td>
                               </tr>
                             </tbody>
                           </table></td>
@@ -253,7 +302,6 @@ it should be part of every ONTRAPORT email template email us your suggestions at
                                   <h6><i><span class="color-black">Get 20% Off On Booking</span></i></h6>
                                   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
                                 </center></td>
-                              <td></td>
                             </tr>
                           </table></td>
                         <td class="expander"></td>
@@ -308,7 +356,7 @@ it should be part of every ONTRAPORT email template email us your suggestions at
                 <tr>
                   <td class="wrapper"><table class="six columns">
                       <tr>
-                        <td class="popular-image-area"><div class="popular-image-wrap"><img src="images/image1.jpg" /></div>
+                        <td class="popular-image-area"><div align="center" class="popular-image-wrap"><img src="images/image1.jpg" /></div>
                           <br/>
                           <h6><b>Lorem Ipsum is simply</b></h6>
                           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p></td>
@@ -316,7 +364,7 @@ it should be part of every ONTRAPORT email template email us your suggestions at
                     </table></td>
                   <td class="wrapper last"><table class="six columns">
                       <tr>
-                        <td><div class="popular-image-wrap"><img src="images/image2.jpg" /></div>
+                        <td><div align="center"  class="popular-image-wrap"><img src="images/image2.jpg" /></div>
                           <br/>
                           <h6><b>Lorem Ipsum is simply</b></h6>
                           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p></td>
@@ -326,7 +374,7 @@ it should be part of every ONTRAPORT email template email us your suggestions at
                 <tr>
                   <td class="wrapper"><table class="six columns">
                       <tr>
-                        <td><div class="popular-image-wrap"><img src="images/image3.jpg" /></div>
+                        <td><div align="center"  class="popular-image-wrap"><img src="images/image3.jpg" /></div>
                           <br/>
                           <h6><b>Lorem Ipsum is simply</b></h6>
                           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p></td>
@@ -334,7 +382,7 @@ it should be part of every ONTRAPORT email template email us your suggestions at
                     </table></td>
                   <td class="wrapper last"><table class="six columns">
                       <tr>
-                        <td><div class="popular-image-wrap"><img src="images/image4.jpg" /></div>
+                        <td><div align="center"  class="popular-image-wrap"><img src="images/image4.jpg" /></div>
                           <br/>
                           <h6><b>Lorem Ipsum is simply</b></h6>
                           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p></td>
@@ -398,8 +446,8 @@ it should be part of every ONTRAPORT email template email us your suggestions at
                         <tr>
                           <td class="three"><div class="profile-image-wrap"><img src="images/profile_image1.jpg"></div></td>
                           <td class="expander"></td>
-                          <td class="one hide-for-small arrow"><img src="images/node.png"></td>
-                          <td class="eight panel client-content"><p class="testimonials-texts"><i>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's stan</i></p>
+                          <td class="one hide-for-small  arrow"><img src="images/node.png"></td>
+                          <td class="eight panel sub-column client-content"><p class="testimonials-texts"><i>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's stan</i></p>
                             <p class="testimonials-texts"><span class="color-red">MR. PITTER RICH WAN</span></p></td>
                           <td class="expander"></td>
                         </tr>
@@ -407,10 +455,10 @@ it should be part of every ONTRAPORT email template email us your suggestions at
                     </table></td>
                 </tr>
                 <tr>
-                  <td class="wrapper last"><table class="twelve columns client-say">
+                  <td class="wrapper last"><table class="twelve columns client-say client-say-even">
                       <tbody>
                         <tr>
-                          <td class="eight panel client-content"><p class="testimonials-texts"><i>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's stan</i></p>
+                          <td class="eight panel sub-column client-content"><p class="testimonials-texts"><i>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's stan</i></p>
                             <p class="testimonials-texts"><span class="color-red">MRS LUSIA CARA KENT</span></p></td>
                           <td class="one hide-for-small arrow-right"><img src="images/node_right.png"></td>
                           <td class="expander"></td>
@@ -428,7 +476,7 @@ it should be part of every ONTRAPORT email template email us your suggestions at
                           <td class="expander"></td>
                           <td class="one hide-for-small arrow"><img src="images/node.png"></td>
                           <td class="expander"></td>
-                          <td class="eight panel client-content"><p class="testimonials-texts"><i>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's stan</i></p>
+                          <td class="eight panel sub-column client-content"><p class="testimonials-texts"><i>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's stan</i></p>
                             <p class="testimonials-texts"><span class="color-red">MR. YAYANG LAURENCE CREW</span></p></td>
                           <td class="expander"></td>
                         </tr>
@@ -441,7 +489,7 @@ it should be part of every ONTRAPORT email template email us your suggestions at
                   <tr>
                     <td class="wrapper last"><table class="twelve columns blue-part blue-part-top">
                         <tr>
-                          <td> <table class="block-grid two-up">
+                          <td><table class="block-grid two-up">
                               <tr>
                                 <td class="wrapper connect-text last" style="text-align:right;"><p align="right">CONNECT WITH US:</p></td>
                                 <td class="wrapper last social-icon" ><a href="javascript://"><img src="images/social/facebook.png" /></a> <a href="javascript://"><img src="images/social/linkin.png" /></a> <a href="javascript://"><img src="images/social/twiter.png" /></a></td>
@@ -457,7 +505,9 @@ it should be part of every ONTRAPORT email template email us your suggestions at
                         <tr>
                           <td><table class="block-grid two-up social-address">
                               <tr>
-                                <td class="center twelve email-text"><center><p><span class="color-white">Contact Info: Phone: 408.341.0600  | &nbsp; Email: <a href="mailto:hseldon@trantor.com" class="color-white"> hseldon@trantor.com</a></span></p></center></td>
+                                <td class="center twelve email-text"><center>
+                                    <p><span class="color-white">Contact Info: Phone: 408.341.0600  | &nbsp; Email: <a href="mailto:hseldon@trantor.com" class="color-white"> hseldon@trantor.com</a></span></p>
+                                  </center></td>
                               </tr>
                             </table></td>
                         </tr>
@@ -469,7 +519,9 @@ it should be part of every ONTRAPORT email template email us your suggestions at
                 <tr>
                   <td class="wrapper last"><table class="twelve columns">
                       <tr>
-                        <td class="center panel my-panel"><center><p>You are receiving this because loren vestibulum et gravida</p></center></td>
+                        <td class="center panel my-panel"><center>
+                            <p>You are receiving this because loren vestibulum et gravida</p>
+                          </center></td>
                       </tr>
                       <tr>
                         <td class="center" align="center"><center>
@@ -480,8 +532,7 @@ it should be part of every ONTRAPORT email template email us your suggestions at
                     </table></td>
                 </tr>
               </table>
-              
-              <!-- container end below --></td>
+              </td>
           </tr>
         </table>
       </center></td>
