@@ -154,7 +154,7 @@ it should be part of every ONTRAPORT email template email us your suggestions at
 	border-right: 1px solid #e6e6e6;
 	border-top: 1px solid #e6e6e6;
 	border-bottom: 1px solid #e6e6e6;
-	border-left: none;
+	border-left: 0 none transparent !important;
 	text-align: left;
 	background: #ffffff;
 	border-color: #e6e6e6;
@@ -166,8 +166,8 @@ table.container table.row {
 	padding: 0px;
 }
 .my-template .client-say.client-say-even .client-content {
-	border-right: 0px;
-	border-left: 1px solid #e6e6e6;
+	border-right: 0 none transparent !important;
+	border-left: 1px solid #e6e6e6 !important;
 	border-color: #e6e6e6;
 }
 .my-template .arrow-right {
@@ -224,6 +224,9 @@ table[class="body"] .columns.logo-area {
 .my-template .top-part {
 	width: 100%;
 	text-align: center;
+}
+.my-template .client-say.client-say-even .client-content{
+	border-right:1px solid #e6e6e6 !important;
 }
 }
 
@@ -445,11 +448,9 @@ table[class="body"] .columns.logo-area {
                       <tbody>
                         <tr>
                           <td class="three"><div class="profile-image-wrap"><img src="images/profile_image1.jpg"></div></td>
-                          <td class="expander"></td>
                           <td class="one hide-for-small  arrow"><img src="images/node.png"></td>
                           <td class="eight panel sub-column client-content"><p class="testimonials-texts"><i>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's stan</i></p>
                             <p class="testimonials-texts"><span class="color-red">MR. PITTER RICH WAN</span></p></td>
-                          <td class="expander"></td>
                         </tr>
                       </tbody>
                     </table></td>
@@ -461,9 +462,7 @@ table[class="body"] .columns.logo-area {
                           <td class="eight panel sub-column client-content"><p class="testimonials-texts"><i>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's stan</i></p>
                             <p class="testimonials-texts"><span class="color-red">MRS LUSIA CARA KENT</span></p></td>
                           <td class="one hide-for-small arrow-right"><img src="images/node_right.png"></td>
-                          <td class="expander"></td>
                           <td class="three"><div class="profile-image-wrap profile-image-wrap-right"><img src="images/profile_image2.jpg"></div></td>
-                          <td class="expander"></td>
                         </tr>
                       </tbody>
                     </table></td>
@@ -473,12 +472,9 @@ table[class="body"] .columns.logo-area {
                       <tbody>
                         <tr>
                           <td class="three"><div class="profile-image-wrap"><img src="images/profile_image3.jpg"></div></td>
-                          <td class="expander"></td>
                           <td class="one hide-for-small arrow"><img src="images/node.png"></td>
-                          <td class="expander"></td>
                           <td class="eight panel sub-column client-content"><p class="testimonials-texts"><i>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's stan</i></p>
                             <p class="testimonials-texts"><span class="color-red">MR. YAYANG LAURENCE CREW</span></p></td>
-                          <td class="expander"></td>
                         </tr>
                       </tbody>
                     </table></td>
